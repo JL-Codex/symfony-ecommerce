@@ -10,17 +10,23 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Our Store</a>
+            <a class="navbar-brand" href="{{ path('app_home') }}">Our Store</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Products</a>
+                        <a class="nav-link" href="{{ path('app_home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="cart.html">Cart</a>
+                        <a class="nav-link" href="{{ path('app_categories') }}">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ path('app_cart') }}">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_profile') }}">Profile</a>
                     </li>
                 </ul>
             </div>
@@ -48,14 +54,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Cart Item 1 -->
+                                    {# Cart items will be dynamized in Étape 3 #}
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="thumbnail.png" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
+                                                <img src="{{ asset('images/thumbnail.png') }}" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
                                                 <div>
                                                     <h6 class="mb-0">Wireless Headphones</h6>
-                                                    <small class="text-muted">Color: Black</small>
                                                 </div>
                                             </div>
                                         </td>
@@ -66,15 +71,12 @@
                                             <button class="btn btn-sm btn-outline-danger">Remove</button>
                                         </td>
                                     </tr>
-
-                                    <!-- Cart Item 2 -->
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="thumbnail.png" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
+                                                <img src="{{ asset('images/thumbnail.png') }}" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
                                                 <div>
                                                     <h6 class="mb-0">Classic Leather Jacket</h6>
-                                                    <small class="text-muted">Size: M</small>
                                                 </div>
                                             </div>
                                         </td>
@@ -85,15 +87,12 @@
                                             <button class="btn btn-sm btn-outline-danger">Remove</button>
                                         </td>
                                     </tr>
-
-                                    <!-- Cart Item 3 -->
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="thumbnail.png" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
+                                                <img src="{{ asset('images/thumbnail.png') }}" class="img-thumbnail me-3" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
                                                 <div>
                                                     <h6 class="mb-0">Bluetooth Speaker</h6>
-                                                    <small class="text-muted">Color: Blue</small>
                                                 </div>
                                             </div>
                                         </td>
@@ -110,7 +109,7 @@
                     </div>
                 </div>
 
-                <a href="index.html" class="btn btn-outline-primary">
+                <a href="{{ path('app_categories') }}" class="btn btn-outline-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                     </svg>
