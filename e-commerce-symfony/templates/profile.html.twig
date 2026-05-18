@@ -41,8 +41,8 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <img src="{{ asset('images/profile.png') }}" class="rounded-circle mb-3" alt="User Avatar" width="150" height="150">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="text-muted">john.doe@email.com</p>
+                        <h5 class="card-title">{{ user.fullName }}</h5>
+                        <p class="text-muted">{{ user.email }}</p>
                         <hr>
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="#profile" class="text-decoration-none">Profile Information</a></li>
@@ -65,27 +65,21 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fw-bold">Full Name:</label>
-                                <p>John Doe</p>
+                                <p>{{ user.fullName }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label class="fw-bold">Email:</label>
-                                <p>john.doe@email.com</p>
+                                <p>{{ user.email }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label class="fw-bold">Phone:</label>
-                                <p>+1 (555) 123-4567</p>
+                                <label class="fw-bold">Role:</label>
+                                <p>{{ user.roles|join(', ') }}</p>
                             </div>
                             <div class="col-md-6">
-                                <label class="fw-bold">Member Since:</label>
-                                <p>January 15, 2024</p>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-12">
-                                <label class="fw-bold">Shipping Address:</label>
-                                <p>123 Main Street, Apt 4B<br>New York, NY 10001<br>United States</p>
+                                <label class="fw-bold">Account Status:</label>
+                                <p><span class="badge bg-success">Active</span></p>
                             </div>
                         </div>
                         <button class="btn btn-outline-primary">Edit Profile</button>

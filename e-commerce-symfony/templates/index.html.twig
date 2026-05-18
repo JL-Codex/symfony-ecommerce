@@ -43,7 +43,7 @@
                 <div class="card h-100">
                     <img src="{{ asset('images/' ~ product.image) }}" class="card-img-top" alt="{{ product.name }}">
                     <div class="card-body">
-                        <span class="badge bg-primary mb-2">{{ product.category.name }}</span>
+                        <span class="badge bg-primary mb-2">{{ product.Category.name }}</span>
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text fw-bold text-success">${{ product.price }}</p>
                         <a href="{{ path('app_product_details', {id: product.id}) }}" class="btn btn-outline-primary">View Details</a>

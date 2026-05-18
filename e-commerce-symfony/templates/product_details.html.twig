@@ -47,12 +47,12 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ path('app_home') }}" class="text-decoration-none">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ path('app_categories') }}" class="text-decoration-none">Categories</a></li>
-                        <li class="breadcrumb-item"><a href="{{ path('app_products_by_category', {id: product.category.id}) }}" class="text-decoration-none">{{ product.category.name }}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ path('app_products_by_Category', {id: product.Category.id}) }}" class="text-decoration-none">{{ product.Category.name }}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
                     </ol>
                 </nav>
 
-                <span class="badge bg-primary mb-3">{{ product.category.name }}</span>
+                <span class="badge bg-primary mb-3">{{ product.Category.name }}</span>
 
                 <h1 class="mb-3">{{ product.name }}</h1>
 
@@ -80,7 +80,7 @@
                 <div class="mt-4 pt-4 border-top">
                     <ul class="list-unstyled">
                         <li class="mb-2"><strong>Availability:</strong> <span class="text-success">In Stock</span></li>
-                        <li class="mb-2"><strong>Category:</strong> {{ product.category.name }}</li>
+                        <li class="mb-2"><strong>Category:</strong> {{ product.Category.name }}</li>
                     </ul>
                 </div>
             </div>

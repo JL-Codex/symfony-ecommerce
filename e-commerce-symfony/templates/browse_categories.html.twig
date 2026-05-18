@@ -39,7 +39,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-3 fw-bold mb-4">Browse Categories</h1>
-                    <p class="lead mb-4">Explore our wide range of products organized by category.</p>
+                    <p class="lead mb-4">Explore our wide range of products organized by Category.</p>
                     <a href="{{ path('app_home') }}" class="btn btn-light btn-lg me-2">Back to Home</a>
                     <a href="#categories" class="btn btn-outline-light btn-lg">See All</a>
                 </div>
@@ -54,18 +54,18 @@
     <div class="container my-5" id="categories">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">Shop by Category</h2>
-            <p class="text-muted">Explore our wide range of products organized by category</p>
+            <p class="text-muted">Explore our wide range of products organized by Category</p>
         </div>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            {% for category in categories %}
+            {% for Category in categories %}
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body text-center">
-                        <span class="badge bg-primary mb-2">{{ category.products|length }} Products</span>
-                        <h4 class="card-title">{{ category.name }}</h4>
-                        <a href="{{ path('app_products_by_category', {id: category.id}) }}" class="btn btn-outline-primary">
-                            Browse {{ category.name }}
+                        <span class="badge bg-primary mb-2">{{ Category.products|length }} Products</span>
+                        <h4 class="card-title">{{ Category.name }}</h4>
+                        <a href="{{ path('app_products_by_Category', {id: Category.id}) }}" class="btn btn-outline-primary">
+                            Browse {{ Category.name }}
                         </a>
                     </div>
                 </div>

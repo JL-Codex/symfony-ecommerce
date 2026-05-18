@@ -8,16 +8,16 @@ use App\Repository\CategoryRepository;
 class CategoryService
 {
     public function __construct(
-        private CategoryRepository $categoryRepository
+        private CategoryRepository $CategoryRepository
     ) {}
 
     public function getAllCategories(): array
     {
-        return $this->categoryRepository->findAll();
+        return $this->CategoryRepository->findAll();
     }
 
     public function getCategoryById(int $id): ?Category
     {
-        return $this->categoryRepository->find($id);
+        return $this->CategoryRepository->find($id);
     }
 }

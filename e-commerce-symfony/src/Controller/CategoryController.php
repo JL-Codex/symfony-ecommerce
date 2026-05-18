@@ -10,29 +10,29 @@ use Symfony\Component\Routing\Attribute\Route;
 class CategoryController extends AbstractController
 {
     public function __construct(
-        private CategoryService $categoryService
+        private CategoryService $CategoryService
     ) {}
 
     #[Route('/categories', name: 'app_categories')]
     public function categories(): Response
     {
         return $this->render('browse_categories.html.twig', [
-            'categories' => $this->categoryService->getAllCategories(),
+            'categories' => $this->CategoryService->getAllCategories(),
         ]);
     }
 
-    #[Route('/categories/{id}', name: 'app_products_by_category')]
+    #[Route('/categories/{id}', name: 'app_products_by_Category')]
     public function productsByCategory(int $id): Response
     {
-        $category = $this->categoryService->getCategoryById($id);
+        $Category = $this->CategoryService->getCategoryById($id);
 
-        if (!$category) {
+        if (!$Category) {
             throw $this->createNotFoundException('Category not found.');
         }
 
-        return $this->render('products_by_category.html.twig', [
-            'category' => $category,
-            'products' => $category->getProducts(),
+        return $this->render('products_by_Category.html.twig', [
+            'Category' => $Category,
+            'products' => $Category->getProducts(),
         ]);
     }
 }
